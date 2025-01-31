@@ -1,0 +1,202 @@
+body, h1, h2, h3, p, ul, li, ol {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header styling with transitions */
+header {
+    background-color: #ff6f61;
+    padding: 15px 20px;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+header:hover {
+    background-color: #e05b54;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.navContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navList {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#navName {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#navItems a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s ease;
+}
+
+#navItems a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+/* Main content styling */
+.mainContent {
+    margin: 20px 0;
+}
+
+.item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.leftBox {
+    flex: 1;
+    min-width: 250px;
+}
+
+.heading h1, .heading h2 {
+    font-size: 1.8rem;
+    color: #ff6f61;
+    margin-bottom: 15px;
+}
+
+.ingredients, .recipe {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ingredients:hover, .recipe:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.ingredients h3, .recipe h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ff6f61;
+    padding-bottom: 5px;
+}
+
+.ingredientsBox, .recipeBox {
+    list-style: none;
+    padding: 0;
+}
+
+.ingredientsBox li, .recipeBox li {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.ingredientsBox li::before, .recipeBox li::before {
+    content: "✔";
+    color: #ff6f61;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.recipeBox li p {
+    margin: 0;
+}
+
+/* Right box with transitions on images */
+.rightBox {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 8px;
+    position: relative;
+}
+
+.rightBox img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, filter 0.4s ease;
+    filter: brightness(90%);
+}
+
+.rightBox:hover img {
+    transform: scale(1.1);
+    filter: brightness(100%);
+}
+
+/* Footer styling */
+footer {
+    background-color: #ff6f61;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+footer:hover {
+    background-color: #e05b54;
+    box-shadow: 0 -6px 12px rgba(0, 0, 0, 0.15);
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .item {
+        flex-direction: column;
+    }
+
+    .rightBox {
+        margin-top: 15px;
+    }
+}

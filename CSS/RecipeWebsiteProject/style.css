@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    height: 100%;
+    width: 100%;
+    overflow-x: none;
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+
+}
+
+nav{
+    width: 100%;
+}
+
+.navContainer{
+    width: 100%;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    min-height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#navName{
+    font-size: 1.5rem;
+    color: azure;
+}
+
+a{
+    text-decoration: none;
+    color: azure;
+}
+
+#navList{
+    width: 100%;
+    padding: 20px;
+    list-style: none;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+#navItems{
+    display: flex;
+    gap: 40px;
+}
+
+.mainContent{
+    width: 70%;
+    background-color: white;
+    margin: auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 30px;
+}
+
+.item{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.rightBox img{
+    height: 200px;
+    width: 300px;
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+.leftBox{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: auto;
+}
+
+.leftBox h1{
+    font-size: 2rem;
+}
+
+.leftBox h3{
+    font-size: 1.5rem;
+}
+
+.ingredientsBox{
+    font-size: 1.2rem;
+}
+
+.recipeBox{
+    font-size: 1rem;
+}
+
+.rightBox{
+    margin: auto;
+}
+
+.rightBox img{
+    transition: all 0.5s linear 0s;
+}
+
+.rightBox img:hover{
+    scale: 1.1;
+}
+
+.footer{
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    text-align: center;
+    min-height: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer p {
+    color: azure;
+    font-size: 1rem;
+    margin: auto;
+}
