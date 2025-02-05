@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    padding: 50px;
+    background-color: aqua;
+    border: 5px solid black;
+    gap: 1rem;
+    display: grid;
+
+    grid-template-areas:  
+    "hd hd hd"
+    "sb c1 c1"
+    "sb c2 c3"
+    "ft ft ft"
+    ;
+}
+
+.items{
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+#hd{
+    grid-area: hd;
+}
+
+#sb{
+    grid-area: sb;
+}
+
+#c1{
+    grid-area: c1;
+}
+
+#c2{
+    grid-area: c2;
+}
+
+#c3{
+    grid-area: c3;
+}
+
+#ft{
+    grid-area: ft;
+}
