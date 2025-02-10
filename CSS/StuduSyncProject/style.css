@@ -412,3 +412,67 @@ body{
 .featureCard:nth-child(6){
     background-color: #7d78b1;
 }
+
+.testimonialContainer{
+    background-color: var(--background-color);
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 1280px;
+}
+
+.testimonialContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.testimonialTitle{
+    font-size: 1.875rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.testimonialGrid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 2rem;
+}
+
+.testimonialCard{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(177, 169, 169);
+    border-radius: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 1rem ;
+    gap: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonialCard:hover{
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border: 1px solid blue;
+}
+
+.testimonialComment{
+    color: #555;
+    font-size: 0.875rem;
+}
+
+.testimonialAvatar img{
+    height: 5rem;
+    width: 5rem;
+}
+
+
+.testimonialName{
+    color: var(--primary-color);
+    font-size: 1rem;
+}
+
+.testimonialOccup{
+    color: #777;
+    font-size: 0.875rem;
+}
