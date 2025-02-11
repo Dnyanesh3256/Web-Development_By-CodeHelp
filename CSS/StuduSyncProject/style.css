@@ -476,3 +476,126 @@ body{
     color: #777;
     font-size: 0.875rem;
 }
+
+.newsLetterContainer{
+    background-color: var(--background-color);
+    padding: 2rem;
+    max-width: 1280px;
+    height: 50vh;
+    margin: 0 auto;
+}
+
+.newsLetterContent{
+    display: flex;
+    background-color: var(--light-gray);
+    height: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.newsLeft{
+    width: 50%;
+    height: 100%;
+    display: none;
+    position: relative;
+}
+
+.newsLeft img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    object-fit: cover;
+    object-position: center;
+    
+}
+
+.newsRight{
+    width: 98%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+@media screen and (min-width:640px) {
+    .newsLeft{
+        display: block;
+        width: 50%;
+    }
+
+    .newsRight{
+        width: 50%;
+    }
+
+    .newsLetterContainer{
+        padding: 2rem;
+    }
+
+    .newsTitle{
+        font-size: 2.5rem;
+    }
+}
+
+.newsInfo{
+    padding: 0 3rem;
+}
+
+.newsTitle{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-align: left;
+}
+
+.newsDesc{
+    text-align: left;
+    color: #777;
+}
+
+.newsForm{
+    padding: 0 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    gap: 0.5rem;
+}
+
+.newsEmail{
+    background-color: var(--background-color);
+    color: #333;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0.5rem 0.75rem;
+}
+
+.newsEmail:focus{
+    border-color: #2563eb;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.newsSend{
+    color: var(--background-color);
+    background-color: var(--primary-color);
+    border-radius: 0.25rem;
+    border: none;
+    padding: 0.5rem 1rem;
+}
+
+.newsSend:hover{
+    background-color: var(--link-color);
+}
+
+.privacyPolicy{
+    padding: 0 3rem;
+    color: #777;
+    font-size: 0.75rem;
+    text-align: left;
+}
+
+.newsLink{
+    text-decoration: underline;
+}
