@@ -599,3 +599,124 @@ body{
 .newsLink{
     text-decoration: underline;
 }
+
+.footerContainer{
+    background-color: var(--background-color);
+    margin: 0 auto;
+    padding: 0 2rem;
+    max-width: 1280px;
+}
+
+.footerContent{
+    max-width: 1280px;
+    padding: 1rem;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footerLeft{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    /* padding: 1.25rem 2.5rem; */
+}
+
+.footerLogoLinkContainer{
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: -2rem;
+}
+
+.logoLink{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logoLink h2{
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: black;
+}
+
+.footerLogoImg{
+    width: 2rem;
+    height: 6rem;
+}
+
+.social{
+    display: flex;
+    gap: 1rem;
+}
+
+.socialIcon{
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.footerRight{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 8rem;
+    padding: 2.30rem 0;
+}
+
+.footerGridColumn{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.footerGridHeading{
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.footerLinkList{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.footerLink{
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.footerCopyright{
+    font-size: 0.8rem;
+    color: var(--gray);
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    border-top: 1px solid #d6d8de;
+}
+
+@media screen and (max-width:1080px) {
+    .footerContent{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footerLeft{
+        padding-left: 5rem;
+    }
+
+    .footerRight{
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .footerLeft{
+        padding-left: 0.5rem;
+    }
+
+    .footerRight{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
