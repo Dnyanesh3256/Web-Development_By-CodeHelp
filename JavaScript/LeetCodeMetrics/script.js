@@ -51,7 +51,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 method: "POST",
                 headers: myHeaders,
                 body: graphql,
-                redirect: "follow"
             };
 
             const response = await fetch(proxyUrl+targetUrl, requestOptions);
@@ -66,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function() {
             displayUserData(parsedData);
         }
         catch(error){
-            statsContainer.innerHTML = `<p> ${error.message} </p>`;
+            statsContainer.innerHTML = `<p>${error.message}</p>`;
         }
         finally{
             searchButton.textContent = "Search";
@@ -79,6 +78,23 @@ document.addEventListener("DOMContentLoaded", function() {
         circle.style.setProperty("--progress-degree", `${progressDegree}%`);
 
         label.textContent = `${solved}/${total}`;
+
+    }
+
+    function displayUserData(parsedData){
+        const totalQues = parsedData.data.allQuestionsCount[0].count;
+        const totalEasyQues = parsedData.data.allQuestionsCount[1].count;
+        const totalMediumQues = parsedData.data.allQuestionsCount[2].count;
+        const totalHardQues = parsedData.data.allQuestionsCount[3].count;
+
+        const solvedTotalQues = parsedData.data.matchedUser.submitStats.acSubmissionNum[0].count;
+        const solvedTotalEasyQues = parsedData.data.matchedUser.submitStats.acSubmissionNum[1].count;
+        const solvedTotalMediumQues = parsedData.data.matchedUser.submitStats.acSubmissionNum[2].count;
+        const solvedTotalHardQues = parsedData.data.matchedUser.submitStats.acSubmissionNum[3].count;
+
+        updateProgress(solvedTotalEasyQues, totalEasyQues, easyLabel, easyProgressCircle);
+        updateProgress(solvedTotalMediumQues, totalMediumQues, mediumLabel, mediumProgressCircle);
+        updateProgress(solvedTotalHardQues, totalHardQues, hardLabel, hardProgressCircle);
 
         const cardsData = [
             {
@@ -99,30 +115,16 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         ];
 
+        console.log(cardsData);
+
         cardStatsContainer.innerHTML = cardsData.map(
             data => {
                 return `<div class="card">
-                            <h3>${data.label}</h3>
+                            <h4>${data.label}</h4>
                             <p>${data.value}</p>
                         </div>`
             }
-        )
-    }
-
-    function displayUserData(parsedData){
-        const totalQues = parsedData.data.allQuestionsCount[0].count;
-        const totalEasyQues = parsedData.data.allQuestionsCount[1].count;
-        const totalMediumQues = parsedData.data.allQuestionsCount[2].count;
-        const totalHardQues = parsedData.data.allQuestionsCount[3].count;
-
-        const solvedTotalQues = parsedData.data.matchedUser.submitStats.acSubmissionNum[0].count;
-        const solvedTotalEasyQues = parsedData.data.matchedUser.submitStats.acSubmissionNum[1].count;
-        const solvedTotalMediumQues = parsedData.data.matchedUser.submitStats.acSubmissionNum[2].count;
-        const solvedTotalHardQues = parsedData.data.matchedUser.submitStats.acSubmissionNum[3].count;
-
-        updateProgress(solvedTotalEasyQues, totalEasyQues, easyLabel, easyProgressCircle);
-        updateProgress(solvedTotalMediumQues, totalMediumQues, mediumLabel, mediumProgressCircle);
-        updateProgress(solvedTotalHardQues, totalHardQues, hardLabel, hardProgressCircle);
+        ).join("")
     }
 
     searchButton.addEventListener('click', function(){

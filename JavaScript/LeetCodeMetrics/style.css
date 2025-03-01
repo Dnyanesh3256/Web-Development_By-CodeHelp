@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-
+h1{
+    font-weight: 1000;
+    text-align: center;
+}
 
 .caveat-fname {
     font-family: "Caveat", serif;
@@ -43,6 +46,11 @@ body{
     gap: 10px;
 }
 
+.userContainer p{
+    font-size: larger;
+    font-weight: bold;
+}
+
 .userInputContainer{
     display: flex;
     justify-content: space-between;
@@ -50,14 +58,22 @@ body{
 
 #userInput{
     width: 80%;
+    height: 2rem;
     padding: 0.2rem;
+    border: none;
     border-radius: 5px;
+    backdrop-filter: blur(10px);
+    outline: none;
 }
-
+  
 #searchBtn{
     width: 15%;
+    height: 2rem;
     padding: 0.2rem;
+    border: none;
     border-radius: 5px;
+    backdrop-filter: blur(10px);
+    outline: none;
 }
 
 .circle{
@@ -86,4 +102,27 @@ body{
     justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 10px;
+}
+
+.statsCard{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.card{
+    background-color: #70d19a;
+    width: 220px;
+    max-width: 270px;
+    padding: 10px;
+    border-radius: 10px;
+    color: black;
+    text-align: center;
+}
+
+.card h4{
+    font-size: 1rem;
 }
