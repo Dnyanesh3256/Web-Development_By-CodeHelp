@@ -128,6 +128,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     searchButton.addEventListener('click', function(){
+        console.log("ok")
         const username = userInput.value;
         console.log("Username : ", username);
         if(validateUsername(username)){
